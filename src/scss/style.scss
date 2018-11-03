@@ -1,0 +1,170 @@
+@import "_minix.scss";
+@import "common.scss";
+.wrapper {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    background: #999;
+}
+
+header {
+    width: 100%;
+    background: #06c1ae;
+    height: pxTorem(44px);
+    color: #fff;
+    @include box_flex;
+    @include justify(space-between);
+    @include align;
+    @include sizing;
+    padding: 0 pxTorem(10px);
+    font-size: pxTorem(14px);
+    div:nth-child(1) {
+        font-size: pxTorem(16px);
+        @include box_flex;
+        @include align;
+        .iconfont {
+            font-size: pxTorem(12px);
+            padding: 0 pxTorem(5px);
+        }
+    }
+    div:last-child {
+        font-size: pxTorem(12px);
+        @include box_flex;
+        @include direction(column);
+        @include align;
+        .iconfont {
+            font-size: pxTorem(18px);
+        }
+    }
+    form {
+        flex: 1;
+        height: pxTorem(30px);
+        background: rgba(0, 0, 0, .15);
+        margin: 0 pxTorem(5px);
+        color: #68dbce;
+        border-radius: pxTorem(5px);
+        @include box_flex;
+        @include align;
+        .iconfont {
+            padding: 0 pxTorem(10px);
+            font-size: pxTorem(18px);
+        }
+    }
+}
+
+section {
+    overflow: hidden;
+    flex: 1;
+    .pullDown,
+    .pullUp {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: pxTorem(50px);
+        text-align: center;
+        background: #FFF;
+        line-height: pxTorem(50px);
+    }
+    .pullDown {
+        top: pxTorem(-50px);
+    }
+    .pullUp {
+        bottom: pxTorem(-50px);
+    }
+    .logo {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .swiper-container {
+        width: 100%;
+        height: paTorem(300px);
+        background: #fff;
+        .swiper-wrapper {
+            width: 100%;
+            .swiper-slide {
+                width: 100%;
+                .list {
+                    width: 100%;
+                    @include box_flex;
+                    @include flexWrap(wrap);
+                    padding: pxTorem(10px) 0 pxTorem(30px) 0;
+                    li {
+                        width: 20%;
+                        @include box_flex;
+                        @include direction(column);
+                        @include align;
+                        @include justify;
+                        font-size: pxTorem(16px);
+                        img {
+                            width: 80%;
+                            margin: pxTorem(5px);
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        width: 100%;
+        background: #fff;
+        .like {
+            height: pxTorem(50px);
+            font-size: pxTorem(16px);
+            margin-left: pxTorem(10px);
+            border-bottom: pxTorem(1px) solid #ccc;
+            @include box_flex;
+            @include sizing;
+            @include align;
+        }
+        .contentlist {
+            width: 100%;
+            li {
+                width: 100%;
+                padding: pxTorem(10px);
+                @include box_flex;
+                @include sizing;
+                .left {
+                    width: 20%;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .right {
+                    flex: 1;
+                    margin-left: pxTorem(10px);
+                    @include direction(column);
+                    @include justify(space-between);
+                    @include box_flex;
+                    .top {
+                        .name {
+                            font-size: pxTorem(18px);
+                        }
+                        .adress {
+                            font-size: pxTorem(14px);
+                            color: #CCC;
+                        }
+                    }
+                    .show {
+                        @include box_flex;
+                        @include align;
+                        @include justify(space-between);
+                        .price {
+                            color: aqua;
+                            font-size: pxTorem(18px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: pxTorem(60px);
+    background: yellow;
+}
